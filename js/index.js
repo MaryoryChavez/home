@@ -8,7 +8,8 @@ function init() {
     var play = $('#play');
 
     parallaxHeader(header);
-    cambioSVG(circulo); cambioSVG(cuadrado); cambioSVG(triangulo); cambioSVG(play);
+    cambioSVG(circulo);cambioSVG(cuadrado);cambioSVG(triangulo);cambioSVG(play);
+    cambioAutomaticoSVG(circulo,cuadrado,triangulo,play);
 }
 
 
@@ -38,19 +39,53 @@ function parallaxHeader(header) {
 function cambioSVG(figura) {
     var link_File_Header = 'images/header/cuadro_';
     var NombreFigura = figura.attr('id');
-    
-    figura.hover(function(){
-        figura.attr('src', link_File_Header+NombreFigura+'Hover.svg');
-    },function(){
-        figura.attr('src',link_File_Header+NombreFigura+'.svg');
+
+    figura.hover(function () {
+        figura.attr('src', link_File_Header + NombreFigura + 'Hover.svg');
+    }, function () {
+        figura.attr('src', link_File_Header + NombreFigura + '.svg');
     });
 }
-
 
 // ###################################################################
 // CAMBIO AUTOMATICO IMAGEN POR SRC
 // ###################################################################
 
-function cambioAutomaticoSVG(circulo,cuadrado,triangulo,play){
+function cambioAutomaticoSVG(circulo,cuadrado,triangulo,play) {
     
+    var link_File_Header = 'images/header/cuadro_';
+    var NombreFigura = [circulo.attr('id'),cuadrado.attr('id'),triangulo.attr('id'), play.attr('id')];
+    var tiempo = 1000;
+    
+     setInterval(function () {
+        if (circulo.attr('src') == link_File_Header + NombreFigura[0] + '.svg') {
+            circulo.attr('src', link_File_Header + NombreFigura[0] + 'Hover.svg');
+        } else {
+            circulo.attr('src', link_File_Header + NombreFigura[0] + '.svg');
+        }
+    }, tiempo*1);
+    
+    setInterval(function () {
+        if (cuadrado.attr('src') == link_File_Header + NombreFigura[1] + '.svg') {
+            cuadrado.attr('src', link_File_Header + NombreFigura[1] + 'Hover.svg');
+        } else {
+            cuadrado.attr('src', link_File_Header + NombreFigura[1] + '.svg');
+        }
+    }, tiempo*2);
+    
+    setInterval(function () {
+        if (triangulo.attr('src') == link_File_Header + NombreFigura[2] + '.svg') {
+            triangulo.attr('src', link_File_Header + NombreFigura[2] + 'Hover.svg');
+        } else {
+            triangulo.attr('src', link_File_Header + NombreFigura[2] + '.svg');
+        }
+    }, tiempo*3);
+    
+    setInterval(function () {
+        if (play.attr('src') == link_File_Header + NombreFigura[3] + '.svg') {
+            play.attr('src', link_File_Header + NombreFigura[3] + 'Hover.svg');
+        } else {
+            play.attr('src', link_File_Header + NombreFigura[3] + '.svg');
+        }
+    }, tiempo*4);
 }
