@@ -1,19 +1,26 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-cham",
   "version": "1.0.0",
   "description": "portafolio personal",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "maryory chavez",
-  "license": "ISC",
-  "dependencies": {
-    "bulma": "^0.4.1",
-    "flexboxgrid": "^6.3.1",
-    "jquery": "^1.12.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaryoryChavez/home.git"
   },
-  "devDependencies": {
-    "gulp": "^3.9.1"
+  "keywords": [
+    "portafolio"
+  ],
+  "author": "maryory chavez arosquipa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaryoryChavez/home/issues"
+  },
+  "homepage": "https://github.com/MaryoryChavez/home#readme",
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "jquery": "^3.2.1"
   }
 }
