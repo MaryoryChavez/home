@@ -1,1 +1,18 @@
-$letraheader:#febb48;
+$dorado_claro:#febb48;
+$morado_oscuro: #533f5a;
+$morado_negro:  #2b1b34;
+@mixin espacio_secciones {
+    padding: 90px 0px;
+}
+
+@mixin titulos {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2.3em;
+    text-transform: uppercase;
+}
+
+@mixin parrafos {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-family: 'Josefin Slab', serif;
+}

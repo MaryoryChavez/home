@@ -1,0 +1,23 @@
+#habilidades * {
+    outline: 1px solid #10d910;
+}
+
+/*-------------------------------------->> HABILIDADES <<--------------------------------------*/
+
+#habilidades{
+    @include espacio_secciones;
+    h1{
+        @include titulos;
+        color: $morado_negro;
+    }
+    h2{
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 1.4em;
+        color: $morado_negro;
+    }
+    p{
+        @include parrafos;
+    }
+}
+
+/*---------------------------------------------------------Cuadros Blancos*/

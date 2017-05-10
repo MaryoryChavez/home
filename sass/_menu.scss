@@ -1,6 +1,4 @@
-#menu * {
-    //outline: 1px solid rgba(255, 73, 73, 0.65);
-}
+/*-------------------------------------->> MENU <<--------------------------------------*/
 
 #menu {
     position: fixed;
@@ -9,17 +7,21 @@
     top: 0;
 }
 
+/*---------------------------------------------------------Logo*/
+
 .logo{
     a{
         text-transform: uppercase;
-        color: $letraheader;
+        color: $dorado_claro;
         text-decoration: none;
         font-size: 1.5em;
         font-family: 'Ramabhadra', sans-serif;
-        border: 2px solid $letraheader;
+        border: 2px solid $dorado_claro;
         padding: 0px 10px;
     }
 }
+
+/*---------------------------------------------------------Opciones*/
 
 ul {
     padding: 0;
@@ -31,7 +33,7 @@ li {
     a{
         text-decoration: none;
         text-transform: uppercase;
-        color: $letraheader;
+        color: $dorado_claro;
         font-family: 'Ramabhadra', sans-serif;
     }
 }

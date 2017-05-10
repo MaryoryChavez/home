@@ -1,0 +1,71 @@
+/*-------------------------------------->> SOBRE MI <<--------------------------------------*/
+
+#sobre_mi {
+    @include espacio_secciones;
+    h1 {
+        @include titulos;
+    }
+    p {
+        @include parrafos;
+    }
+}
+
+.image_me {
+    text-align: center;
+    img {
+        width: 12%;
+        border-radius: 100%;
+        padding: 10px;
+        border: 1px solid $morado_oscuro;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 48em;
+    }
+}
+
+/*---------------------------------------------------------Informacion SM*/
+
+.bordes{  
+    margin: 0px 0px;
+}
+
+.ayuda, .saludo{
+    color: #2b1b34;
+    text-align: justify;
+    padding: 5px 20px 0px;
+    border: 1px solid $morado_oscuro;
+}
+
+
+.ayuda_titulo{
+    border-right: 1px solid $morado_oscuro;
+}
+
+.saludo_titulo{
+    border-left: 1px solid $morado_oscuro;
+}
+
+/*---------------------------------------------------------Efecto Background*/
+
+.bkd_oscura{
+    background-color: $morado_oscuro;
+    color: $dorado_claro;
+    border: 1px solid $dorado_claro;
+}
+
+.bkd_dorada{
+    background-color: $dorado_claro;
+    color: $morado_oscuro;
+}
+
+.image_me img.r_morado{
+    background-color: $morado_oscuro;
+    border: 1px solid $dorado_claro;
+}
+
+.image_me img.r_dorado{
+    background-color: $dorado_claro;
+    border: 1px solid $morado_oscuro;
+}
