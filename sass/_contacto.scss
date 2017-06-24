@@ -1,0 +1,119 @@
+footer *{
+//    outline: 1px solid #10d910;
+}
+
+footer{
+    background-color: $dorado_claro;
+    @include espacio_secciones($altura:30px, $arriba:true, $abajo:true);
+    .container{
+        outline: 1px solid $morado_oscuro;
+    }
+    h1{
+        @include titulos;
+        color: $morado_negro;
+    }
+    p{
+        @include parrafos;
+        color: $morado_negro;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+#formulario_contacto{
+    padding: 10px 20px;
+//    margin-top: 20px;
+    p{
+        margin: 30px 0px 10px 0px;
+        border: 1px solid $morado_oscuro;
+        border-radius: 20px;
+        width: 80%;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+input,textarea,#enviar_mensaje{
+    width: 20em;
+    border-radius: 20px;
+    padding: 8px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.3em;
+    color: $morado_oscuro;
+    transition: border .5s;
+    border: 3px solid $dorado_claro;
+}
+
+input:focus, textarea:focus{
+	border: solid 3px $morado_oscuro;	
+}
+
+textarea{
+	height: 100px;	
+	resize: none; 
+	overflow: auto;
+}
+
+#enviar_mensaje{
+	background-color: $morado_oscuro;
+	color: #fff;
+	height: 50px;
+	cursor: pointer;
+	margin-top: 40px;
+	transition: background-color 0.5s;
+}
+#enviar_mensaje:hover{
+	background-color: $morado_negro;
+	
+}
+
+a.boton{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin: 0px 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.github{
+    background-color: #221e1b;
+}
+
+.github:hover{
+    background-color: #0b0b0a;
+    transition: .2s;
+}
+
+.whatsapp{
+    background-color: #20B038;
+}
+
+.whatsapp:hover{
+    background-color: #299d3c;
+    transition: .2s;
+}
+
+
+.curriculum{
+    background-color:  #2266b0;
+    font-weight: bold;
+}
+
+.curriculum:hover{
+    background-color:  #295e98;
+    transition: .2s;
+}
+
+
+.soci-link{
+    font-size: 2em;
+    background: none;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -2,8 +2,14 @@ body{
     margin: 0;
 }
 
+body *{
+    outline: 1px solid rgba(40, 232, 40, 0.71);
+}
+
 @import "packs";
 @import "header";
 @import "sobremi";
 @import "habilidades";
+@import "trabajos";
+@import "contacto";
 @import "menu";

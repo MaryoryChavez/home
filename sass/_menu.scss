@@ -7,33 +7,48 @@
     top: 0;
 }
 
+#menu {
+    transition: .5s all;
+}
+
+
 /*---------------------------------------------------------Logo*/
 
-.logo{
-    a{
+.logo {
+    a {
         text-transform: uppercase;
         color: $dorado_claro;
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-family: 'Ramabhadra', sans-serif;
         border: 2px solid $dorado_claro;
         padding: 0px 10px;
     }
 }
 
+
 /*---------------------------------------------------------Opciones*/
 
-ul {
-    padding: 0;
+#menu {
+    ul {
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin: 0px 15px;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $dorado_claro;
+            font-family: 'Ramabhadra', sans-serif;
+            font-size: 0.9em;
+        }   }
 }
 
-li {
-    display: inline-block;
-    margin: 10px;
-    a{
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $dorado_claro;
-        font-family: 'Ramabhadra', sans-serif;
+/*---------------------------------------------------------Responsive*/
+
+@media screen and (max-width:767px){
+    #menu {
+        display: none;
     }
 }

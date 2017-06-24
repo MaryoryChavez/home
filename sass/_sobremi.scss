@@ -1,7 +1,7 @@
 /*-------------------------------------->> SOBRE MI <<--------------------------------------*/
 
 #sobre_mi {
-    @include espacio_secciones;
+    @include espacio_secciones(90px, $arriba:true, $abajo:true);
     h1 {
         @include titulos;
     }
@@ -21,7 +21,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 48em;
+        top: 53.5em;
     }
 }
 
