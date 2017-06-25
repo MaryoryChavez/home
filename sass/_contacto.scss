@@ -117,3 +117,28 @@ a.boton{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/*---------------------------------------------------------Responsive*/
+
+@media screen and (max-width:767px){
+    #formulario_contacto{
+        padding: 0px;
+        p{
+            border: none;
+            padding: 0px;
+        }
+    }
+    input,textarea,#enviar_mensaje{
+        width: 10em;
+        padding: 0px;
+    }
+    
+    #footer{
+        .container{
+        outline: none;
+    }
+    }
+    .detallerow{
+        margin: 0px;
+    }
+}

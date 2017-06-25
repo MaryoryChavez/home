@@ -198,3 +198,26 @@
 {
     content: '←';
 }
+
+/*---------------------------------------------------------Responsive*/
+
+@media screen and (max-width:767px){
+    .center, .slider{
+        display: none;
+    }
+    .pantalla, #cell{
+        display: none;
+    }
+    .web{
+        position: relative;
+        left: 50%;
+        top: -10%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    #pc{
+    width:auto;
+    position: inherit;
+    overflow:inherit;
+}
+}

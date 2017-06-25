@@ -48,7 +48,42 @@
 /*---------------------------------------------------------Responsive*/
 
 @media screen and (max-width:767px){
+    .escritorio{
+        display: none;
+    }
+    .movil{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        a{
+            color: $morado_negro;
+            border-color: $morado_negro;
+            background-color: $dorado_claro;
+        }
+    }
     #menu {
+        background-color: rgba(254, 187, 72, 0.67);
+        ul{
+            display: none;
+        }
+        li{
+            display: block;
+            margin-bottom: 15px;
+            border: 1px solid $morado_negro;
+            background-color: $dorado_claro;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            a{
+                font-size: 0.7em;
+                color: $morado_negro;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:768px){
+    .movil{
         display: none;
     }
 }

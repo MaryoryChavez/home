@@ -38,15 +38,6 @@
     border: 1px solid $morado_oscuro;
 }
 
-
-.ayuda_titulo{
-    border-right: 1px solid $morado_oscuro;
-}
-
-.saludo_titulo{
-    border-left: 1px solid $morado_oscuro;
-}
-
 /*---------------------------------------------------------Efecto Background*/
 
 .bkd_oscura{
@@ -68,4 +59,21 @@
 .image_me img.r_dorado{
     background-color: $dorado_claro;
     border: 1px solid $morado_oscuro;
+}
+
+/*---------------------------------------------------------Responsive*/
+
+@media screen and (max-width:767px){
+    .ayuda, .saludo{
+        text-align: inherit;
+        h1{
+            text-align: center;
+        }
+    }
+    .saludo{
+        margin-bottom: 30px;
+    }
+    .image_me{
+        display: none;
+    }
 }

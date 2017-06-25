@@ -85,3 +85,19 @@ header {
     z-index: 25;
     opacity: .35;
 }
+
+/*---------------------------------------------------------Responsive*/
+
+@media screen and (max-width:767px){
+    .cuadro_me{
+        display: none;
+    }
+    .cuadros{
+        display: none;
+    }
+    .mensaje_header{
+        h1{
+            margin: 50px;
+        }
+    }
+}

@@ -7,6 +7,7 @@ function init() {
     trabajos();
     espacios();
     formulario();
+    menuMobile();
 }
 
 $(document).scroll(function(){
@@ -24,6 +25,24 @@ $(document).scroll(function(){
         }
     });
 
+function menuMobile() {
+    $(".movil").on('click', function () {
+        $('#menu ul').slideToggle("slow");
+    });
+    
+    (function ($) {
+        function mediaSize() {
+            if (window.matchMedia('(min-width: 767px)').matches) {
+                $('#menu ul').css('display', 'inline-block');
+            } else {
+                $('#menu ul').css('display', '');
+            }
+        };
+
+        mediaSize();
+        window.addEventListener('resize', mediaSize, false);
+    })(jQuery);
+}
 function header() {
     var header = $('#header');
     var circulo = $('#circulo');
@@ -149,26 +168,23 @@ function slider() {
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 3,
+        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>',
+        nextArrow:'<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>',
+        
         responsive: [{
-                breakpoint: 768,
+                breakpoint: 767,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-                },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
+                    centerPadding: '10px',
+                    slidesToShow: 1,
+                    prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>',
+                    nextArrow:'<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>'
                 }
                 }
             ]
     });
+    
 }
 
 // ###################################################################
@@ -177,7 +193,7 @@ function slider() {
 
 function lista_Trabajos() {
 
-    var array = [{
+    var arrayDatosDeProyectos = [{
             identificado: 'apros',
             titulo: 'Proyecto: Plantilla Apros',
             resumen: 'Proyecto ganador de la hackaton "Laboratoria Talent Fest" realizado en la ciudad de Arequipa',
@@ -213,15 +229,16 @@ function lista_Trabajos() {
             demo: 'https://maryorychavez.github.io/danza-arte/',
             pantalla:'images/webs/danza.png'
     }]
-    $('.slick-next,.slick-prev').click(function () {
-        for (var i = 0; i < array.length; i++) {
-            if ($('.center .slick-center').children("img").attr("alt") == array[i].identificado) {
-                $('#titulo_proyecto').html(array[i].titulo);
-                $('#resumen_proyecto').html(array[i].resumen);
-                $('#tools_proyecto').html(array[i].tools);
-                $('#gestion_proyecto').html(array[i].gestion);
-                $("#demo_proyecto").attr("href", array[i].demo).attr("target", '_blank');
-                $('.web').attr('src',array[i].pantalla);
+    $('button.slick-next, button.slick-prev').click(function () {
+        console.log('pro');
+        for (var i = 0; i < arrayDatosDeProyectos.length; i++) {
+            if ($('.center .slick-center').children("img").attr("alt") == arrayDatosDeProyectos[i].identificado) {
+                $('#titulo_proyecto').html(arrayDatosDeProyectos[i].titulo);
+                $('#resumen_proyecto').html(arrayDatosDeProyectos[i].resumen);
+                $('#tools_proyecto').html(arrayDatosDeProyectos[i].tools);
+                $('#gestion_proyecto').html(arrayDatosDeProyectos[i].gestion);
+                $("#demo_proyecto").attr("href", arrayDatosDeProyectos[i].demo).attr("target", '_blank');
+                $('.web').attr('src',arrayDatosDeProyectos[i].pantalla);
             }
         }
     });
