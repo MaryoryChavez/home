@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <title>Portafolio-CHAM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/flexboxgrid.css">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Josefin+Slab|Ramabhadra" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/devicon.min.css">
     <link rel="stylesheet" href="css/sosicon.css">
     <link rel="stylesheet" href="css/typicons.css">
@@ -188,7 +189,7 @@ Gracias por la visita!!!!
                             <img src="images/webs/apros.PNG" alt="" class="web">
                         </div>
                         <div id="cell">
-                            <img src="images/webs/cel_marco.svg" alt="" >
+                            <img src="images/webs/cel_marco.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -218,25 +219,31 @@ Gracias por la visita!!!!
                 </div>
             </div>
             <div class="row center-xs">
-                        <div class="col-sm-12 col-xs-12">
-                            <div class="row center-xs" id="botones_contacto">
-                                <a href="https://github.com/MaryoryChavez" target="_blank" class="boton github"><i class="socicon-github soci-link"></i></a>
-                                <a href="" class="boton whatsapp"><i class="socicon-whatsapp soci-link"></i></a>
-                                <a href="https://drive.google.com/file/d/0B4ANnFiBHgIySkJVdnhsVkdjd1k/view?usp=sharing" target="_blank" class="boton curriculum"><div class="curriculum soci-link">Cv</div></a>
-                            </div>
+                <div class="col-sm-12 col-xs-12">
+                    <div class="row center-xs" id="botones_contacto">
+                        <a href="https://github.com/MaryoryChavez" target="_blank" class="boton github"><i class="socicon-github soci-link"></i></a>
+                        <a href="#inline" class="boton whatsapp default_popup"><i class="socicon-whatsapp soci-link"></i></a>
+                        <div id="inline" style="display:none">
+                           <p class="numero_popup">¡Mandame un mensaje!</p>
+                            <p class="numero_popup">+51 934712487</p>
                         </div>
+                        <a href="https://drive.google.com/file/d/0B4ANnFiBHgIySkJVdnhsVkdjd1k/view?usp=sharing" target="_blank" class="boton curriculum">
+                            <div class="curriculum soci-link">Cv</div>
+                        </a>
                     </div>
+                </div>
+            </div>
             <div class="row middle-sm center-xs">
                 <form id="formulario_contacto" method="POST">
                     <div class="row center-xs detallerow">
                         <div class="col-sm-6 col-xs-12">
-                        <p>Nombre</p><input type="text" name="name" id="nombre">
-                    <p>Correo</p><input type="email" name="_replyto" id="correo">
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                        <p>Mensaje</p><textarea name="message" id="mensaje"></textarea>
-                    </div>
-                    <button id="enviar_mensaje">Enviado</button>
+                            <p>Nombre</p><input type="text" name="name" id="nombre">
+                            <p>Correo</p><input type="email" name="_replyto" id="correo">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <p>Mensaje</p><textarea name="message" id="mensaje"></textarea>
+                        </div>
+                        <button id="enviar_mensaje">Enviado</button>
                     </div>
                 </form>
             </div>
@@ -244,18 +251,11 @@ Gracias por la visita!!!!
     </footer>
 
 </body>
-<!--<script src="js/jquery.min.js"></script>-->
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="js/jquery.popup.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/index.js"></script>
 
-<!--
-<script type="text/javascript">
-    $(document).on('ready', function() {
-        
-    });
-</script>
--->
 
 </html>

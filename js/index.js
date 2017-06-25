@@ -8,6 +8,7 @@ function init() {
     espacios();
     formulario();
     menuMobile();
+    $('.default_popup').popup();
 }
 
 $(document).scroll(function(){

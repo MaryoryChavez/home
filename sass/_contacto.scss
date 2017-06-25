@@ -2,6 +2,13 @@ footer *{
 //    outline: 1px solid #10d910;
 }
 
+.numero_popup{
+    font-size: 1.5em;
+    font-family: 'Hammersmith One', sans-serif;
+    color: $morado_oscuro;
+    text-align: center;
+}
+
 footer{
     background-color: $dorado_claro;
     @include espacio_secciones($altura:30px, $arriba:true, $abajo:true);
