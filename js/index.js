@@ -6,7 +6,7 @@ function init() {
     sobre_mi();
     trabajos();
     espacios();
-    formulario();
+//    formulario();
     menuMobile();
     $('.default_popup').popup();
 }
