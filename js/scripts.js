@@ -2,7 +2,7 @@
 function initSolonick() {
     "use strict";
     //   loader ------------------
-    $(".pin").text("Loading");
+    $(".pin").text("Cargando");
     $(".loader-wrap").fadeOut(300, function () {
         $("#main").animate({
             opacity: "1"
